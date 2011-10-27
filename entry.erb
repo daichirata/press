@@ -1,17 +1,19 @@
-<div class="article section">
-  <div class="header">
-    <h2 class="title"><a href="<%= @entry.link %>"><%= @entry.title %></a></h2>
-  </div>
-  <div class="body">
-    <%= @entry.body %>
-  </div>
-  <div class="footer">
-    <%= tweet_button("http://a-newcomer.heroku.com/#{@entry.id}") %>
-    <%= hatena_bookmark_button(@entry.title, "http://a-newcomer.heroku.com/#{@entry.id}") %>
-    <div class="created_at"><%= l @entry.created_at.to_time %></div>
-    <%= @entry.tags_to_html %>
-  </div>
-</div>
-<div id="comment">
-  <%= partial "comment", :locals => {:entry => @entry} %>
-</div>
+<article class="entry">
+    <header class="entry-header">
+        <h1 class="entry-title"><%= @entry.title %></h1>
+    </header>
+    <section class="entry-body">
+        <%= @entry.body %>
+    </section>
+    <footer class="entry-footer">
+        <p>
+            In <%= @entry.tags.map{|tag| %Q| <a href="#{tag.link}">#{tag.name}</a> |}.join(",") %>
+            by <span class="author vcard"><a href="#"><%= @entry.user.name %></a></span>
+            on <time><%= @entry.created_at.to_date %></time>
+        </p>
+    </footer>
+</article><!-- END Article -->
+
+<section>
+    <%= partial "comment", :locals => {:entry => @entry} %>
+</section>

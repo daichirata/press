@@ -1,31 +1,31 @@
-<% @posts.each do |post| %>
-<article class="entry">
-    <header class="entry-header">
-        <time class="entry-date"><%= l post.created_at.to_date %></time>
-        <h1 class="entry-title"><a href="<%= post.link %>"><%= post.title %></a></h1>
-    </header>
-    <section class="entry-body">
-        <%= post.body %>
-    </section>
-    <footer class="entry-footer">
-        <p>
-            In <%= post.tags.map{|tag| %Q| <a href="#{tag.link}">#{tag.name}</a> |}.join(",") %>
-            by <span class="author vcard"><a class="url fn n" href="#">Author name</a></span>
-            on <time><%= l post.created_at %></time>
-        </p>
-    </footer>
-</article><!-- END Article -->
-
-<hr>
+<% @posts.map.with_index(1) do |post, i| %>
+    <article class="entry">
+        <header class="entry-header">
+            <h1 class="entry-title"><a href="<%= post.link %>"><%= post.title %></a></h1>
+        </header>
+        <section class="entry-body">
+            <%= post.body %>
+        </section>
+        <footer class="entry-footer">
+            <p>
+                In <%= post.tags.map{|tag| %Q| <a href="#{tag.link}">#{tag.name}</a> |}.join(",") %>
+                by <span class="author vcard"><a href="#"><%= post.user.name %></a></span>
+                on <time><%= post.created_at.to_date %></time>
+            </p>
+        </footer>
+    </article><!-- END Article -->
+    <% if @posts.size > i %>
+        <hr >
+    <% end %>
 <% end %>
 
-<div class="pager">
-  <ul>
-<% if @posts.pager.previous_page %>
-    <li class="previous"><a href="?page=<%= @posts.pager.previous_page %>"><%= t.newer %></a></li>
-<% end %>
-<% if @posts.pager.next_page %>
-    <li class="next"><a href="?page=<%= @posts.pager.next_page %>"><%= t.older %></a></li>
-<% end %>
-  </ul>
-</div>
+<nav class="pagenation">
+    <ul>
+        <% if @posts.pager.previous_page %>
+        <li class="previous"><a href="?page=<%= @posts.pager.previous_page %>"><%= t.newer %></a></li>
+        <% end %>
+        <% if @posts.pager.next_page %>
+        <li class="next"><a href="?page=<%= @posts.pager.next_page %>"><%= t.older %></a></li>
+        <% end %>
+    </ul>
+</nav>

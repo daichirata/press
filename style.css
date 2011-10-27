@@ -209,9 +209,10 @@ section#bread-crumb {
   #contents .entry {
     padding: 20px 0 40px; }
     #contents .entry .entry-header .entry-title {
+      color: #333;
       margin-bottom: 20px;
       line-height: 1.4;
-      font-size: 30px;
+      font-size: 32px;
       font-weight: bold;
       text-shadow: 0 1px 0 white; }
       #contents .entry .entry-header .entry-title a {
@@ -252,20 +253,32 @@ section#bread-crumb {
   float: right;
   margin-left: 20px; }
   #aside .calender, #aside .recent-entries, #aside .tags {
-    margin-bottom: 20px; }
+    margin-bottom: 30px; }
+  #aside .calender {
+    margin-top: 20px;
+    margin-left: 0; }
+  #aside dt {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-shadow: 0 1px 0 white; }
+  #aside dl {
+    margin: 6px 0; }
 
 /* END Container */
 /* Footer  */
 #footer {
-  width: 940px;
+  width: 1000px;
   position: relative;
   margin: 0 auto;
   clear: both;
   padding: 30px 0;
-  /* background: url(images/img_star.png) left top repeat-x; */ }
+  text-align: center; }
 
 /* END Footer */
 /* Any */
+table.calendar {
+  margin-left: 0; }
+
 table.calendar a:link, table.calendar a:visited {
   color: #d64e80; }
 

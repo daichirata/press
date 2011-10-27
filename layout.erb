@@ -35,23 +35,23 @@
                 </section>
                 <nav class="recent-entries">
                     <dt><%= t.recent_entries %></dt>
-                        <dd>
-                            <ul>
-                                <% Post.recent(5).each do |post| %>
-                                <li><%= link_to post.title, post.link %></li>
-                                <% end %>
-                            </ul>
-                        </dd>
+                    <dd>
+                        <ul>
+                            <% Post.recent(5).each do |post| %>
+                            <li><%= link_to post.title, post.link %></li>
+                            <% end %>
+                        </ul>
+                    </dd>
                 </nav>
                 <nav class="tags">
-                        <dt><%= t.tags %></dt>
-                        <dd>
-                            <ul>
-                                <% Tag.all.each do |tag| %>
-                                <li><%= link_to tag.name, tag.link %></li>
-                                <% end %>
-                            </ul>
-                        </dd>
+                    <dt><%= t.tags %></dt>
+                    <dd>
+                        <ul>
+                            <% Tag.all.each do |tag| %>
+                            <li><%= link_to tag.name, tag.link %></li>
+                            <% end %>
+                        </ul>
+                    </dd>
                 </nav>
             </div><!-- END Aside -->
             <!-- Contents
@@ -63,8 +63,8 @@
         <!-- Footer
         ================================================== -->
         <footer id="footer" class="clearfix">
-            <div class="copy"><a href="/"><%= @site.title %></a></div>
-            <div class="poweredby wide">powered by <a href="http://lokka.org/">Lokka</a></div>
+            <p id="copy">Copyright &copy; 2011 <%= @site.title %>. All Rights Reserved.</p>
+            <p id="powerd">Powered by <a href="http://lokka.org/">Lokka</a></p>
         </footer>
         <%= footer %>
     </body>
