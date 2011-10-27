@@ -1,22 +1,24 @@
 <% @posts.each do |post| %>
-<div class="article section">
-  <div class="header">
-    <h2 class="title"><a href="<%= post.link %>"><%= post.title %></a></h2>
-  </div>
-  <div class="body">
-    <%= post.body %>
-  </div>
-  <div class="footer">
-    <%= tweet_button("http://a-newcomer.heroku.com/#{post.id}") %>
-    <%= hatena_bookmark_button(post.title, "http://a-newcomer.heroku.com/#{post.id}") %>
-    <div class="created_at"><%= l post.created_at.to_time %></div>
-    <span class="link_to_entry_comment">
-      <%= link_to "#{t.comments}(#{post.comments.size})", "#{post.link}#comment_wrapper" %>
-    </span>
-    <%= post.tags_to_html %>
-  </div>
-</div>
+<article class="entry">
+    <header class="entry-header">
+        <time class="entry-date"><%= l post.created_at.to_date %></time>
+        <h1 class="entry-title"><a href="<%= post.link %>"><%= post.title %></a></h1>
+    </header>
+    <section class="entry-body">
+        <%= post.body %>
+    </section>
+    <footer class="entry-footer">
+        <p>
+            In <%= post.tags.map{|tag| %Q| <a href="#{tag.link}">#{tag.name}</a> |}.join(",") %>
+            by <span class="author vcard"><a class="url fn n" href="#">Author name</a></span>
+            on <time><%= l post.created_at %></time>
+        </p>
+    </footer>
+</article><!-- END Article -->
+
+<hr>
 <% end %>
+
 <div class="pager">
   <ul>
 <% if @posts.pager.previous_page %>
