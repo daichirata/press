@@ -1,3 +1,7 @@
+<section class="bread-crumb clearfix">
+    <%= bread_crumb %>
+</section>
+
 <article class="entry">
     <header class="entry-header">
         <h1 class="entry-title"><%= @entry.title %></h1>
@@ -10,10 +14,11 @@
             In <%= @entry.tags.map{|tag| %Q| <a href="#{tag.link}">#{tag.name}</a> |}.join(",") %>
             by <span class="author vcard"><a href="#"><%= @entry.user.name %></a></span>
             on <time><%= @entry.created_at.to_date %></time>
+            <span class="comments"><%= link_to "#{t.comments}(#{@entry.comments.size})", "#{@entry.link}#comment" %></span>
         </p>
     </footer>
 </article><!-- END Article -->
 
-<section>
+<section id="comment">
     <%= partial "comment", :locals => {:entry => @entry} %>
 </section>

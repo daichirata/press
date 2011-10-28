@@ -21,18 +21,23 @@
             <h1 id="header-title" class="clearfix"><a href="/"><%= @site.title %></a></h1>
             <h2 id="header-description" class="clearfix"><%= @site.description %></h2>
         </header>
-        <!-- <section id="bread-crumb"> -->
-        <!--     <%= bread_crumb %> -->
-        <!-- </section> -->
         <!-- Container
         ================================================== -->
         <div id="container" class="clearfix">
             <!-- Right Side
             ================================================== -->
             <div id="aside" class="clearfix">
-                <section class="calender">
-                    <%= calendar %>
+                <% if about = Snippet("about") %>
+                <section class="profile">
+                    <h1><%= t.profile %></h1>
+                    <div class="side_cont_body">
+                        <%= about.body %>
+                    </div>
                 </section>
+                <% end %>
+                <!-- <section class="calender"> -->
+                <!--     <%#= calendar %> -->
+                <!-- </section> -->
                 <nav class="recent-entries">
                     <dt><%= t.recent_entries %></dt>
                     <dd>
@@ -52,6 +57,39 @@
                             <% end %>
                         </ul>
                     </dd>
+                </nav>
+                <nav class="archives">
+                    <h1><%= t.archives %></h1>
+                    <ul>
+                    <% months.each do |m| %>
+                        <li>
+                            <span>&middot;</span>
+                            <%= link_to "#{m.year}年#{m.month}月", "/#{m.year}/#{m.month}/" %>
+                        </li>
+                    <% end %>
+                    </ul>
+                </nav>
+                <nav class="search">
+                    <h1><%= t.search %></h1>
+                    <form action="/search/" method="get" id="">
+                        <input type="text" name="query" placeholder="Search...">
+                        <input class="button" type="submit" value="検索">
+                    </form>
+                </nav>
+                <nav class="ad-menu">
+                    <ul>
+                        <% if logged_in? %>
+                        <li>
+                            <%= link_to t.admin_page, '/admin/' %>｜
+                        </li>
+                        <li>
+                            <%= link_to t.new_post, '/admin/posts/new' %>｜
+                        </li>
+                        <li>
+                            <%= link_to t.logout, '/admin/logout' %>
+                        </li>
+                        <% end %>
+                    </ul>
                 </nav>
             </div><!-- END Aside -->
             <!-- Contents
