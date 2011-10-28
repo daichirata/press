@@ -9,5 +9,7 @@ This is a Theme for [Lokka](http://lokka.org)
 
 ## Sample
 
-[<img src="http://cdn-ak.f.st-hatena.com/images/fotolife/b/bunnyhop/20111028/20111028144430.png?1319780725"/>]
+[Sample](http://a-newcomer.com)
+
+<img src="http://cdn-ak.f.st-hatena.com/images/fotolife/b/bunnyhop/20111028/20111028144430.png?1319780725"/>
 
