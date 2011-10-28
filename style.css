@@ -139,6 +139,7 @@ a, a:visited {
   color: #d64e80;
   text-decoration: underline;
   -webkit-transition: all 100ms linear;
+  -moz-transition: all 100ms linear;
   transition: all 100ms linear; }
 
 a:hover {
@@ -167,10 +168,12 @@ a:active, a:focus {
   transform: translateZ(0);
   -webkit-transition: all 200ms linear;
   -moz-transition: all 200ms linear;
-  -webkit-transform: translateZ(0); }
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0); }
 #header-title a:hover {
   background: none;
   -webkit-transform: scale(1.1) translateZ(0);
+  -moz-transform: scale(1.1) translateZ(0);
   transform: scale(1.1) translateZ(0); }
 
 /* END Header */
@@ -202,6 +205,7 @@ a:active, a:focus {
         color: #333;
         text-decoration: none;
         -webkit-transition: color 150ms ease-in-out;
+        -moz-transition: color 150ms ease-in-out;
         transition: color 150ms ease-in-out; }
       #contents .entry .entry-header .entry-title a:hover {
         color: #ac0649; }
@@ -327,7 +331,8 @@ table.calendar a {
   font-size: 13px;
   text-decoration: none;
   transition: all 100ms linear;
-  -webkit-transition: all 100ms linear; }
+  -webkit-transition: all 100ms linear;
+  -moz-transition: all 100ms linear; }
 
 table.calendar a:hover, table.calendar a:active {
   color: #FFFFFF;
