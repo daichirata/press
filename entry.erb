@@ -7,7 +7,7 @@
         <h1 class="entry-title"><%= @entry.title %></h1>
     </header>
     <section class="entry-body">
-        <%= @entry.body %>
+        <%= rm_read_more @entry.body rescue @entry.body %>
     </section>
     <footer class="entry-footer">
         <p>

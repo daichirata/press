@@ -4,7 +4,7 @@
             <h1 class="entry-title"><a href="<%= post.link %>"><%= post.title %></a></h1>
         </header>
         <section class="entry-body">
-            <%= post.body %>
+            <%= read_more(post.body, post.link) rescue post.body %>
         </section>
         <footer class="entry-footer">
             <p>

@@ -1,10 +1,10 @@
 @charset "UTF-8";
 /*
-	Name: Press
-	Date: Oct 2011
-	Version: 1.0
-	Author: Daichi Hirata
-	Author URI: http://a-newcomer.com
+    Name: Press
+    Date: Oct 2011
+    Version: 1.0
+    Author: Daichi Hirata
+    Author URI: http://a-newcomer.com
 */
 /* CSS Document */
 /* Reset */
@@ -161,6 +161,7 @@ a:active, a:focus {
   color: #1E1E1E;
   font: bold 66px 'Droid Serif', sans-serif;
   float: left;
+  padding: 5px 0;
   letter-spacing: -3px;
   text-decoration: none;
   text-shadow: 0 1px 0 white;
@@ -204,16 +205,15 @@ a:active, a:focus {
       #contents .entry .entry-header .entry-title a {
         color: #333;
         text-decoration: none;
+        transition: color 150ms ease-in-out;
         -webkit-transition: color 150ms ease-in-out;
-        -moz-transition: color 150ms ease-in-out;
-        transition: color 150ms ease-in-out; }
+        -moz-transition: color 150ms ease-in-out; }
       #contents .entry .entry-header .entry-title a:hover {
         color: #ac0649; }
     #contents .entry .entry-body {
       margin-bottom: 20px; }
       #contents .entry .entry-body p {
-        margin-top: 15px;
-        margin-bottom: 15px; }
+        margin: 15px 0; }
       #contents .entry .entry-body h1, #contents .entry .entry-body h2, #contents .entry .entry-body h3, #contents .entry .entry-body h4, #contents .entry .entry-body h5, #contents .entry .entry-body h6 {
         margin: 30px 0 20px; }
     #contents .entry .entry-footer {
@@ -234,6 +234,15 @@ a:active, a:focus {
       background: -o-linear-gradient(top, #f3f3f3 0%, #ececec 100%);
       background: -ms-linear-gradient(top, #f3f3f3 0%, #ececec 100%);
       background: linear-gradient(top, #f3f3f3 0%, #ececec 100%); }
+    #contents .entry .thumbnail {
+      float: left;
+      background: #f4f4f4;
+      padding: 10px;
+      margin-top: 0;
+      margin-left: -50px;
+      border: 2px solid #cecdcd;
+      border-radius: 3px 5px 5px 5px;
+      text-align: center; }
   #contents .bread-crumb {
     margin-top: -10px; }
     #contents .bread-crumb a {
