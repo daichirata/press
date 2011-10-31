@@ -288,22 +288,18 @@ a:active, a:focus {
     font-weight: normal;
     text-shadow: 0 1px 0 white;
     margin-bottom: 10px; }
-  #aside .profile,
-  #aside .calender,
-  #aside .recent-entries,
-  #aside .archives,
-  #aside .tags {
-    margin-bottom: 30px; }
-  #aside .ad-menu ul {
-    padding-top: 30px; }
-  #aside .ad-menu li {
-    float: left; }
   #aside dt {
     margin-bottom: 10px;
     font-size: 18px;
     text-shadow: 0 1px 0 white; }
   #aside dl {
     margin: 6px 0; }
+  #aside .side-nav {
+    margin-bottom: 30px; }
+  #aside .ad-menu ul {
+    padding-top: 30px; }
+  #aside .ad-menu li {
+    float: left; }
 
 #not-found {
   width: 1000px;

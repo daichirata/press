@@ -28,17 +28,15 @@
             ================================================== -->
             <div id="aside" class="clearfix">
                 <% if about = Snippet("about") %>
-                <section class="profile">
+                <section class="side-nav">
                     <h1><%= t.profile %></h1>
-                    <div class="side_cont_body">
-                        <%= about.body %>
-                    </div>
+                    <%= about.body %>
                 </section>
                 <% end %>
                 <!-- <section class="calender"> -->
                 <!--     <%#= calendar %> -->
                 <!-- </section> -->
-                <nav class="recent-entries">
+                <nav class="side-nav">
                     <dt><%= t.recent_entries %></dt>
                     <dd>
                         <ul>
@@ -48,7 +46,7 @@
                         </ul>
                     </dd>
                 </nav>
-                <nav class="tags">
+                <nav class="side-nav">
                     <dt><%= t.tags %></dt>
                     <dd>
                         <ul>
@@ -58,7 +56,7 @@
                         </ul>
                     </dd>
                 </nav>
-                <nav class="archives">
+                <nav class="side-nav">
                     <h1><%= t.archives %></h1>
                     <ul>
                     <% months.each do |m| %>
@@ -69,14 +67,49 @@
                     <% end %>
                     </ul>
                 </nav>
-                <nav class="search">
+                <nav class="side-nav">
                     <h1><%= t.search %></h1>
                     <form action="/search/" method="get" id="">
                         <input type="text" name="query" placeholder="Search...">
                         <input class="button" type="submit" value="検索">
                     </form>
                 </nav>
-                <nav class="ad-menu">
+                <nav class="side-nav">
+                    <dd>
+                        <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+                        <script>
+                          new TWTR.Widget({
+                            version: 2,
+                            type: 'profile',
+                            rpp: 6,
+                            interval: 6000,
+                            width: 'auto',
+                            height: 'auto',
+                            theme: {
+                              shell: {
+                                background: 'none',
+                                color: '#333'
+                              },
+                              tweets: {
+                                background: 'none',
+                                color: '#333',
+                                links: '#d64e80'
+                              }
+                            },
+                            features: {
+                              scrollbar: false,
+                              loop: false,
+                              live: false,
+                              hashtags: true,
+                              timestamp: true,
+                              avatars: false,
+                              behavior: 'all'
+                            }
+                          }).render().setUser('Daic_h').start();
+                        </script>
+                    </dd>
+                </nav>
+                <nav class="ad-nav">
                     <ul>
                         <% if logged_in? %>
                         <li>

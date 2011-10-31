@@ -310,27 +310,17 @@ a:active, a:focus {
         text-shadow: 0 1px 0 white;
         margin-bottom: 10px;
     }
-    .profile,
-    .calender,
-    .recent-entries,
-    .archives,
-    .tags {
-        margin-bottom: 30px;
-    }
-    .ad-menu{
-        ul {
-            padding-top: 30px;
-        }
-        li {
-            float:left
-        }
-    }
     dt {
         margin-bottom: 10px;
         font-size: 18px;
         text-shadow: 0 1px 0 white;
     }
     dl { margin: 6px 0; }
+    .side-nav { margin-bottom: 30px; }
+    .ad-menu{
+        ul { padding-top: 30px; }
+        li { float:left; }
+    }
 }
 
 #not-found {
