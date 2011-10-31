@@ -326,28 +326,3 @@ a:active, a:focus {
     text-shadow: 1px 1px 0px white; }
 
 /* END Footer */
-/* Any */
-table.calendar {
-  margin-left: 0; }
-
-table.calendar a:link, table.calendar a:visited {
-  color: #d64e80; }
-
-table.calendar a {
-  color: #AC0649;
-  display: block;
-  font-size: 13px;
-  text-decoration: none;
-  transition: all 100ms linear;
-  -webkit-transition: all 100ms linear;
-  -moz-transition: all 100ms linear; }
-
-table.calendar a:hover, table.calendar a:active {
-  color: #FFFFFF;
-  text-shadow: none;
-  background-color: #AC0649;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px; }
-
-/* END Any */
