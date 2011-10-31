@@ -10,7 +10,7 @@ module Lokka
     end
 
     def rm_read_more(body)
-      body.index("[More]") ? body.gsub!(/\[More\]/, "") : body
+      body.index("[More]") ? body.sub!(/\[More\]/, "") : body
     end
   end
 end
