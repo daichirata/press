@@ -213,7 +213,8 @@ a:active, a:focus {
     #contents .entry .entry-body {
       margin-bottom: 20px; }
       #contents .entry .entry-body .top {
-        min-height: 162px; }
+        min-height: 162px;
+        margin-bottom: 40px; }
       #contents .entry .entry-body p {
         margin: 15px 0; }
       #contents .entry .entry-body h1, #contents .entry .entry-body h2, #contents .entry .entry-body h3, #contents .entry .entry-body h4, #contents .entry .entry-body h5, #contents .entry .entry-body h6 {
