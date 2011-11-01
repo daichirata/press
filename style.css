@@ -101,6 +101,9 @@ hr {
 .clearfix {
   zoom: 1; }
 
+pre, code {
+  font-family: monospace, sans-serif; }
+
 pre {
   background: #121212;
   border-radius: 5px;
@@ -110,14 +113,16 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word; }
 
-pre, code {
-  font-family: monospace, sans-serif; }
-
 blockquote {
   color: #424242;
   padding: 30px 30px;
   text-shadow: 0 1px 0 white;
   background: url(images/quote.png) no-repeat left top; }
+
+.images {
+  -webkit-box-shadow: 0px 1px 1px #bbb;
+  -moz-box-shadow: 0px 1px 1px #bbb;
+  box-shadow: 0px 1px 1px #bbb; }
 
 /* Form */
 input, textarea {
@@ -212,13 +217,14 @@ a:active, a:focus {
         color: #ac0649; }
     #contents .entry .entry-body {
       margin-bottom: 20px; }
+      #contents .entry .entry-body .read-more {
+        text-align: right; }
       #contents .entry .entry-body .top {
-        min-height: 162px;
         margin-bottom: 40px; }
-      #contents .entry .entry-body p {
-        margin: 15px 0; }
       #contents .entry .entry-body h1, #contents .entry .entry-body h2, #contents .entry .entry-body h3, #contents .entry .entry-body h4, #contents .entry .entry-body h5, #contents .entry .entry-body h6 {
         margin: 30px 0 20px; }
+      #contents .entry .entry-body p {
+        margin: 15px 0; }
     #contents .entry .entry-footer {
       background: #F3F3F3;
       border: 1px solid;
@@ -242,7 +248,7 @@ a:active, a:focus {
       background: #f4f4f4;
       padding: 10px;
       margin-top: 0;
-      margin-left: -50px;
+      margin-left: -40px;
       border: 2px solid #cecdcd;
       border-radius: 3px 5px 5px 5px;
       text-align: center; }

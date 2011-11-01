@@ -83,6 +83,8 @@ hr { margin-bottom: 20px; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
+pre, code { font-family: monospace, sans-serif; }
+
 pre {
     background: #121212;
     border-radius: 5px;
@@ -93,15 +95,17 @@ pre {
     word-wrap: break-word;
 }
 
-pre, code {
-    font-family: monospace, sans-serif;
-}
-
 blockquote {
     color: #424242;
     padding: 30px 30px;
     text-shadow: 0 1px 0 white;
     background: url(images/quote.png) no-repeat left top;
+}
+
+.images {
+    -webkit-box-shadow: 0px 1px 1px #bbb;
+    -moz-box-shadow: 0px 1px 1px #bbb;
+    box-shadow: 0px 1px 1px #bbb;
 }
 
 /* Form */
@@ -130,14 +134,9 @@ a, a:visited {
     transition: all 100ms linear;
 }
 
-a:hover {
-    color: #AC0649;
-    text-shadow: 0 1px 0 #fff;
-}
+a:hover { color: #AC0649; text-shadow: 0 1px 0 #fff; }
 
-a:active, a:focus {
-    outline: 0 none;
-}
+a:active, a:focus { outline: 0 none; }
 
 /* END Global */
 
@@ -220,12 +219,10 @@ a:active, a:focus {
         }
         .entry-body {
             margin-bottom: 20px;
-            .top{
-                min-height: 162px;
-                margin-bottom: 40px;
-            }
-            p { margin: 15px 0; }
+            .read-more { text-align: right; }
+            .top { margin-bottom: 40px; }
             h1,h2,h3,h4,h5,h6 { margin: 30px 0 20px; }
+            p { margin: 15px 0; }
         }
         .entry-footer {
             background: #F3F3F3;
@@ -252,7 +249,7 @@ a:active, a:focus {
             background: #f4f4f4;
             padding: 10px;
             margin-top: 0;
-            margin-left: -50px;
+            margin-left: -40px;
             border: 2px solid #cecdcd;
             border-radius: 3px 5px 5px 5px;
             text-align: center;
@@ -321,7 +318,7 @@ a:active, a:focus {
     }
     dl { margin: 6px 0; }
     .side-nav { margin-bottom: 30px; }
-    .ad-nav{
+    .ad-nav {
         ul { padding-top: 30px; }
         li { float:left; }
     }
@@ -332,10 +329,7 @@ a:active, a:focus {
     padding: 20px 30px 50px 30px;
     margin: 0 auto;
     position: relative;
-    h1 {
-        color: #AC0649;
-        text-shadow: 0 1px 0 #fff;
-    }
+    h1 { color: #AC0649; text-shadow: 0 1px 0 #fff; }
 }
 
 /* END Container */
@@ -350,9 +344,7 @@ a:active, a:focus {
     clear: both;
     padding: 30px 0;
     text-align: center;
-    p {
-        text-shadow: 1px 1px 0px white;
-    }
+    p { text-shadow: 1px 1px 0px white; }
 }
 
 /* END Footer */
