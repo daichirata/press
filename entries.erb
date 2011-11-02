@@ -4,11 +4,11 @@
             <h1 class="entry-title"><a href="<%= post.link %>"><%= post.title %></a></h1>
         </header>
         <section class="entry-body">
-            <%= read_more(post.body, post.link) rescue post.body %>
+            <%= press_read_more(post.body, post.link) rescue post.body %>
         </section>
         <footer class="entry-footer">
             <p>
-                In <%= post.tags.map{|tag| %Q| <a href="#{tag.link}">#{tag.name}</a> |}.join(",") %>
+                Tag <%= post.tags.map{|tag| %Q| <a href="#{tag.link}">#{tag.name}</a> |}.join(",") %>
                 by <span class="author vcard"><a href="#"><%= post.user.name %></a></span>
                 on <time><%= post.created_at.to_date %></time>
                 <span class="comments"><%= link_to "#{t.comments}(#{post.comments.size})", "#{post.link}#comment" %></span>
@@ -22,11 +22,15 @@
 
 <nav class="pagenation">
     <ul>
-        <% if @posts.pager.previous_page %>
-        <li class="previous"><a href="?page=<%= @posts.pager.previous_page %>"><%= t.newer %></a></li>
-        <% end %>
-        <% if @posts.pager.next_page %>
-        <li class="next"><a href="?page=<%= @posts.pager.next_page %>"><%= t.older %></a></li>
-        <% end %>
+        <li class="next">
+          <% if @posts.pager.previous_page %>
+            <a class="next-link" href="?page=<%= @posts.pager.previous_page %>"><%= t.newer %></a>
+          <% end %>
+        </li>
+        <li class="previous">
+          <% if @posts.pager.next_page %>
+            <a class="previous-link" href="?page=<%= @posts.pager.next_page %>"><%= t.older %></a>
+          <% end %>
+        </li>
     </ul>
 </nav>

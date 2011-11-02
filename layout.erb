@@ -9,7 +9,8 @@
         <link rel="alternate" href="/index.atom" type="application/atom+xml">
 
         <link rel="stylesheet" href="<%= @theme.path %>/style.css" >
-        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <link href='http://fonts.googleapis.com/css?family=Quicksand:300' rel='stylesheet' type='text/css'>
+                <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
         <!--[if lt IE 9]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
@@ -20,7 +21,7 @@
         ================================================== -->
         <header id="header-top">
             <h1 id="header-title" class="clearfix"><a href="/"><%= @site.title %></a></h1>
-            <h2 id="header-description" class="clearfix"><%= @site.description %></h2>
+            <h2 id="header-description"><%= @site.description %></h2>
         </header>
         <!-- Container
         ================================================== -->
@@ -125,6 +126,9 @@
             </div><!-- END Aside -->
             <!-- Contents
             ================================================== -->
+            <section class="bread-crumb">
+                <%= press_bread_crumb %>
+            </section>
             <div id="contents" class="clearfix">
                 <%= yield %>
             </div><!-- END Contents -->
