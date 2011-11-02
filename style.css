@@ -30,6 +30,7 @@ article, aside, details, footer, header, hgroup, menu, nav, section, summary {
 /* Global Style */
 body {
   font-size: 14px;
+  font-weight: normal;
   line-height: 160%;
   font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   margin: 0;
@@ -176,12 +177,13 @@ a:active, a:focus {
 #header-top {
   color: #1E1E1E;
   font-family: 'Quicksand', sans-serif;
-  width: 1000px;
+  width: 1060px;
   margin: 0 auto;
-  padding: 60px 20px 60px; }
+  padding: 80px 0 80px; }
   #header-top #header-title a {
     color: #1E1E1E;
     font-size: 80px;
+    font-weight: 300;
     float: left;
     padding-bottom: 30px;
     letter-spacing: -3px;
@@ -198,7 +200,7 @@ a:active, a:focus {
     -moz-transform: scale(1.1) translateZ(0);
     transform: scale(1.1) translateZ(0); }
   #header-top #header-description {
-    font-weight: light;
+    font-weight: normal;
     font-size: 20px; }
 
 /* END Header */
@@ -215,17 +217,21 @@ a:active, a:focus {
   box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0px 0px 15px rgba(204, 204, 204, 0.5); }
 
 #contents {
-  width: 620px;
+  width: 700px;
   float: left; }
   #contents .entry {
     padding-top: 20px; }
+    #contents .entry .entry-header h1:first-letter {
+      color: #ac0649;
+      font-size: 50px;
+      font-style: italic; }
     #contents .entry .entry-header .entry-title {
       color: #333;
-      margin-bottom: 20px;
+      font-size: 26px;
+      font-weight: normal;
       line-height: 1.4;
-      font-size: 32px;
-      font-weight: bold;
-      text-shadow: 0 0 3px rgba(0, 0, 0, 0.5); }
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
       #contents .entry .entry-header .entry-title a {
         color: #333;
         text-decoration: none;
@@ -238,12 +244,15 @@ a:active, a:focus {
     #contents .entry .entry-body .read-more {
       text-align: right; }
     #contents .entry .entry-body h1, #contents .entry .entry-body h2, #contents .entry .entry-body h3, #contents .entry .entry-body h4, #contents .entry .entry-body h5, #contents .entry .entry-body h6 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: normal;
       padding: 7px 0 7px 22px;
       border-left: 3px solid #BB3B68;
       margin: 55px 0 25px 0; }
     #contents .entry .entry-body p {
       margin: 15px 0; }
     #contents .entry .entry-footer {
+      font-family: 'Quicksand', sans-serif;
       margin: 5px 0 35px 0;
       background: #F3F3F3;
       border: 1px solid;
@@ -295,23 +304,24 @@ a:active, a:focus {
       margin: 0 0 25px 0; }
 
 #aside {
-  width: 300px;
+  font-size: 12px;
+  width: 260px;
   float: right;
   margin-left: 20px;
   padding-top: 30px; }
   #aside h1 {
-    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 26px;
     font-weight: normal;
-    text-shadow: 0 1px 0 white;
     margin-bottom: 10px; }
   #aside dt {
-    margin-bottom: 10px;
-    font-size: 18px;
-    text-shadow: 0 1px 0 white; }
+    font-family: 'Quicksand', sans-serif;
+    font-size: 26px;
+    margin-bottom: 10px; }
   #aside dl {
     margin: 6px 0; }
   #aside .side-nav {
-    margin-bottom: 30px; }
+    margin-bottom: 50px; }
   #aside .ad-nav ul {
     padding-top: 30px; }
   #aside .ad-nav li {

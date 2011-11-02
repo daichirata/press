@@ -7,7 +7,7 @@
     </section>
     <footer class="entry-footer">
         <p>
-            Tag <%= @entry.tags.map{|tag| %Q| <a href="#{tag.link}">#{tag.name}</a> |}.join(",") %>
+            Tags <%= @entry.tags.map{|tag| %Q| <a href="#{tag.link}">#{tag.name}</a> |}.join(",") %>
             by <span class="author vcard"><a href="#"><%= @entry.user.try(:name) %></a></span>
             on <time><%= @entry.created_at.to_date %></time>
             <span class="comments"><%= link_to "#{t.comments}(#{@entry.comments.size})", "#{@entry.link}#comment" %></span>

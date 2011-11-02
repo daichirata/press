@@ -2,11 +2,10 @@
     <header>
         <h1 class="comment-title">コメント一覧</h1>
     </header>
-    <ul id="comments">
-        <% entry.comments.reverse.map.with_index(1) do |comment, i| %>
-        <li id="comment-<%= comment.id %>" class="comment">
-            <div class="comment-body">
-                <%= hbr comment.body %>
+    <dl id="comments">
+        <ol>
+          <% entry.comments.reverse.map.with_index(1) do |comment, i| %>
+            <li id="comment-<%= comment.id %>" class="comment">
                 <footer>
                     <span class="name">
                         <%= link_to_unless comment.homepage.blank?, comment.name, comment.homepage %>
@@ -15,13 +14,16 @@
                         <%= comment.created_at.to_date %>
                     </span>
                 </footer>
-            </div>
-        </li>
-          <% if entry.comments.size > i %>
-              <hr>
+                <div class="comment-body">
+                    <%= hbr comment.body %>
+                </div>
+            </li>
+            <% if entry.comments.size > i %>
+                <hr>
+            <% end %>
           <% end %>
-        <% end %>
-    </ul>
+        </ol>
+    </dl>
 <% end %>
 <div class="comment-form">
     <%= comment_form %>

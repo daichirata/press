@@ -9,7 +9,7 @@
         <link rel="alternate" href="/index.atom" type="application/atom+xml">
 
         <link rel="stylesheet" href="<%= @theme.path %>/style.css" >
-        <link href='http://fonts.googleapis.com/css?family=Quicksand:300' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
                 <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
         <!--[if lt IE 9]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -31,12 +31,12 @@
             <div id="aside" class="clearfix">
                 <% if about = Snippet("about") %>
                 <section class="side-nav">
-                    <h1><%= t.profile %></h1>
+                    <h1>About Me</h1>
                     <%= about.body %>
                 </section>
                 <% end %>
                 <nav class="side-nav">
-                    <dt><%= t.recent_entries %></dt>
+                    <dt>Recent Entries</dt>
                     <dd>
                         <ul>
                             <% Post.recent(5).each do |post| %>
@@ -46,7 +46,7 @@
                     </dd>
                 </nav>
                 <nav class="side-nav">
-                    <dt><%= t.tags %></dt>
+                    <dt>Tags</dt>
                     <dd>
                         <ul>
                             <% Tag.all.each do |tag| %>
@@ -56,7 +56,7 @@
                     </dd>
                 </nav>
                 <nav class="side-nav">
-                    <h1><%= t.archives %></h1>
+                    <h1>Archives</h1>
                     <ul>
                     <% months.each do |m| %>
                         <li>
@@ -67,7 +67,7 @@
                     </ul>
                 </nav>
                 <nav class="side-nav">
-                    <h1><%= t.search %></h1>
+                    <h1>Search</h1>
                     <form action="/search/" method="get" id="">
                         <input type="text" name="query" placeholder="Search...">
                         <input class="button" type="submit" value="検索">

@@ -37,6 +37,7 @@ article,aside,details,footer,header,hgroup,menu,nav,section,summary { display: b
 
 body {
     font-size: 14px;
+    font-weight: normal;
     line-height: 160%;
     font-family:"メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
     margin: 0;
@@ -171,14 +172,14 @@ a:active, a:focus { outline: 0 none; }
 #header-top {
     color: #1E1E1E;
     font-family: 'Quicksand', sans-serif;
-
-    width: 1000px;
+    width: 1060px;
     margin: 0 auto;
-    padding: 60px 20px 60px;
+    padding: 80px 0 80px;
     #header-title {
         a {
             color: #1E1E1E;
             font-size: 80px;
+            font-weight: 300;
             float: left;
             padding-bottom: 30px;
             letter-spacing: -3px;
@@ -198,7 +199,7 @@ a:active, a:focus { outline: 0 none; }
         }
     }
     #header-description {
-        font-weight: light;
+        font-weight: normal;
         font-size: 20px;
     }
 }
@@ -222,18 +223,23 @@ a:active, a:focus { outline: 0 none; }
 }
 
 #contents {
-    width: 620px;
+    width: 700px;
     float: left;
     .entry {
         padding-top: 20px;
         .entry-header{
+            h1:first-letter {
+                color: #ac0649;
+                font-size: 50px;
+                font-style: italic;
+            }
             .entry-title {
                 color: #333;
-                margin-bottom: 20px;
+                font-size: 26px;
+                font-weight:normal;
                 line-height: 1.4;
-                font-size: 32px;
-                font-weight: bold;
-                text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+                margin-bottom: 20px;
+                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
                 a {
                     color: #333;
                     text-decoration: none;
@@ -248,6 +254,8 @@ a:active, a:focus { outline: 0 none; }
         .entry-body {
             .read-more { text-align: right; }
             h1,h2,h3,h4,h5,h6 {
+                font-family: 'Quicksand', sans-serif;
+                font-weight: normal;
                 padding: 7px 0 7px 22px;
                 border-left: 3px solid #BB3B68;
                 margin: 55px 0 25px 0;
@@ -255,6 +263,7 @@ a:active, a:focus { outline: 0 none; }
             p { margin: 15px 0; }
         }
         .entry-footer {
+            font-family: 'Quicksand', sans-serif;
             margin: 5px 0 35px 0;
             background: #F3F3F3;
             border: 1px solid;
@@ -319,23 +328,24 @@ a:active, a:focus { outline: 0 none; }
 }
 
 #aside {
-    width: 300px;
+    font-size: 12px;
+    width: 260px;
     float: right;
     margin-left: 20px;
     padding-top: 30px;
     h1 {
-        font-size: 18px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 26px;
         font-weight: normal;
-        text-shadow: 0 1px 0 white;
         margin-bottom: 10px;
     }
     dt {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 26px;
         margin-bottom: 10px;
-        font-size: 18px;
-        text-shadow: 0 1px 0 white;
     }
     dl { margin: 6px 0; }
-    .side-nav { margin-bottom: 30px; }
+    .side-nav { margin-bottom: 50px; }
     .ad-nav {
         ul { padding-top: 30px; }
         li { float:left; }
