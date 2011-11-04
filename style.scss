@@ -210,13 +210,13 @@ a:active, a:focus { outline: 0 none; }
 /* Container */
 
 #container {
-    background: rgba(204, 204, 204, .4);
-    border-radius: 5px 5px 10px 10px;
     width: 1000px;
-    padding: 20px 30px 50px 30px;
+    padding: 20px 30px 20px 30px;
     margin: 0 auto;
     position: relative;
 
+    background: rgba(204, 204, 204, .4);
+    border-radius: 5px 5px 10px 10px;
     -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0px 0px 15px rgba(204, 204, 204, 0.5);
     -moz-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0px 0px 15px rgba(204, 204, 204, 0.5);
     box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0px 0px 15px rgba(204, 204, 204, 0.5);
@@ -226,7 +226,6 @@ a:active, a:focus { outline: 0 none; }
     width: 700px;
     float: left;
     .entry {
-        padding-top: 20px;
         .entry-header{
             h1:first-letter {
                 color: #ac0649;
@@ -289,13 +288,28 @@ a:active, a:focus { outline: 0 none; }
             padding: 10px;
             margin-top: 0;
             margin-left: -40px;
+            text-align: center;
             border: 2px solid #cecdcd;
             border-radius: 3px 5px 5px 5px;
-            text-align: center;
         }
 
     }
+    .toggle-comments {
+        position: relative;
+        float: right;
+        color: #BB3B68;
+        cursor: pointer;
+    }
     #comment {
+        #comment-list{
+            margin: 20px 0 20px;
+            p {margin: 0;}
+            .comment-header{
+                margin: 20px 0 10px;
+                .name{ font-size: 20px;}
+                .date{ font-size: 12px;}
+            }
+        }
         .comment-title{
             font-size: 20px;
             line-height: 1.4;
@@ -307,14 +321,6 @@ a:active, a:focus { outline: 0 none; }
             padding: 10px 30px;
         }
         .comment-form {
-            background: rgba(204, 204, 204, 0.2);
-            border: 1px solid #C9C9C9;
-            border-radius: 5px;
-            margin-top: 30px;
-            padding: 20px;
-            -webkit-box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.7);
-            -moz-box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.7);
-            box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.7);
             p {
                 margin-bottom: 25px;
             }
@@ -350,10 +356,39 @@ a:active, a:focus { outline: 0 none; }
         ul { padding-top: 30px; }
         li { float:left; }
     }
+    .archives {
+        li {
+            list-style-position: inside;
+            list-style-type: disc;
+        }
+    }
+    .social-icon{
+        margin-top: 10px;
+        li {
+            float:left;
+            margin-right: 5px;
+            span {
+                color: #D64E80;
+                text-align: center;
+                top: 210px;
+                height: 15px;
+                padding: 5px 10px 10px;
+                position: absolute;
+                z-index: 2;
+                display: none;
+
+                background: rgba(204, 204, 204, .4);
+                border-radius: 5px 5px 10px 10px;
+                -webkit-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0px 0px 15px rgba(204, 204, 204, 0.5);
+                -moz-box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0px 0px 15px rgba(204, 204, 204, 0.5);
+                box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.4), 0px 0px 15px rgba(204, 204, 204, 0.5);
+            }
+        }
+    }
 }
 
 #not-found {
-    width: 1000px;
+    width: 1060px;
     padding: 20px 30px 50px 30px;
     margin: 0 auto;
     position: relative;
@@ -366,7 +401,7 @@ a:active, a:focus { outline: 0 none; }
 /* Footer  */
 
 #footer {
-    width: 1000px;
+    width: 1060px;
     text-align: center;
     margin: 0 auto;
     padding: 30px 0;

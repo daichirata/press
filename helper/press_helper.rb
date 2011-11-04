@@ -1,6 +1,18 @@
 # -*- coding: utf-8 -*-
 module Lokka
   module Helpers
+    URLS = {
+      :rss => "http://www.google.com/ig/add?source=atgs&feedurl=http://a-newcomer.com",
+      :twitter => "https://twitter.com/Daic_h",
+      :facebook => "http://www.facebook.com/hirata.daichi",
+      :github => "https://github.com/daic-h",
+      :aboutme => "http://about.me/daic_h"
+    }
+
+    def social_image_tag service
+      link_to(image_tag("#{@theme.path}" + "/images/#{service.to_s}.png"), URLS[service], :target => "_blank", :alt => service.to_s.capitalize)
+    end
+
     def press_bread_crumb
       return if @bread_crumbs.size == 1
       @bread_crumbs[0..-2].inject('<ol>') do |html,bread|
@@ -32,6 +44,43 @@ module Lokka
       html <<     "</li>"
       html <<   "</ul>"
       html << "</nav>"
+      html.html_safe
+    end
+
+    def press_twitter_widget
+      html =<<-HTML
+      <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+      <script>
+        new TWTR.Widget({
+          version: 2,
+          type: 'profile',
+          rpp: 6,
+          interval: 6000,
+          width: 'auto',
+          height: 'auto',
+          theme: {
+            shell: {
+              background: 'none',
+              color: '#333'
+            },
+            tweets: {
+              background: 'none',
+              color: '#333',
+              links: '#d64e80'
+            }
+          },
+          features: {
+            scrollbar: false,
+            loop: false,
+            live: false,
+            hashtags: true,
+            timestamp: true,
+            avatars: false,
+            behavior: 'all'
+          }
+        }).render().setUser('Daic_h').start();
+      </script>
+      HTML
       html.html_safe
     end
   end
