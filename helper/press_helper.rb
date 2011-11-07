@@ -33,6 +33,7 @@ module Lokka
     end
 
     def press_pager(entry, option = {})
+      return if entry.blank? || entry.id == nil
       prev_entry, next_entry = Entry(entry.id - 1), Entry(entry.id + 1)
       html =  "<nav class=#{option[:class]}>"
       html <<   "<ul>"

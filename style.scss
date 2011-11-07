@@ -263,6 +263,7 @@ a:active, a:focus { outline: 0 none; }
         }
         .entry-footer {
             font-family: 'Quicksand', sans-serif;
+            font-weight: normal;
             margin: 5px 0 35px 0;
             background: #F3F3F3;
             border: 1px solid;
@@ -370,7 +371,7 @@ a:active, a:focus { outline: 0 none; }
             span {
                 color: #D64E80;
                 text-align: center;
-                top: 210px;
+                top: 200px;
                 height: 15px;
                 padding: 5px 10px 10px;
                 position: absolute;

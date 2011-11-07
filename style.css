@@ -251,6 +251,7 @@ a:active, a:focus {
     margin: 15px 0; }
   #contents .entry .entry-footer {
     font-family: 'Quicksand', sans-serif;
+    font-weight: normal;
     margin: 5px 0 35px 0;
     background: #F3F3F3;
     border: 1px solid;
@@ -341,7 +342,7 @@ a:active, a:focus {
       #aside .social-icon li span {
         color: #D64E80;
         text-align: center;
-        top: 210px;
+        top: 200px;
         height: 15px;
         padding: 5px 10px 10px;
         position: absolute;
