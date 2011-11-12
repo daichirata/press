@@ -172,7 +172,7 @@ a:active, a:focus { outline: 0 none; }
 #header-top {
     color: #1E1E1E;
     font-family: 'Quicksand', sans-serif;
-    width: 1060px;
+    width: 960px;
     margin: 0 auto;
     padding: 80px 0 80px;
     #header-title {
@@ -210,7 +210,7 @@ a:active, a:focus { outline: 0 none; }
 /* Container */
 
 #container {
-    width: 1000px;
+    width: 900px;
     padding: 20px 30px 20px 30px;
     margin: 0 auto;
     position: relative;
@@ -223,7 +223,7 @@ a:active, a:focus { outline: 0 none; }
 }
 
 #contents {
-    width: 700px;
+    width: 600px;
     float: left;
     .entry {
         .entry-header{
@@ -295,6 +295,12 @@ a:active, a:focus { outline: 0 none; }
         }
 
     }
+    .hr-entry {
+        margin: 30px 0 20px;
+        border-top: 1px dashed #CCC;
+        height:1px;
+        color:#FFFFFF;
+    }
     .toggle-comments {
         position: relative;
         float: right;
@@ -336,9 +342,9 @@ a:active, a:focus { outline: 0 none; }
 
 #aside {
     font-size: 12px;
-    width: 260px;
+    width: 240px;
     float: right;
-    margin-left: 20px;
+    /* margin-left: 20px; */
     padding-top: 30px;
     h1 {
         font-family: 'Quicksand', sans-serif;
@@ -389,7 +395,7 @@ a:active, a:focus { outline: 0 none; }
 }
 
 #not-found {
-    width: 1060px;
+    width: 960px;
     padding: 20px 30px 50px 30px;
     margin: 0 auto;
     position: relative;
@@ -402,7 +408,7 @@ a:active, a:focus { outline: 0 none; }
 /* Footer  */
 
 #footer {
-    width: 1060px;
+    width: 960px;
     text-align: center;
     margin: 0 auto;
     padding: 30px 0;
