@@ -10,7 +10,7 @@ module Lokka
     }
 
     def social_image_tag service
-      link_to(image_tag("#{@theme.path}" + "/images/#{service.to_s}.png"), URLS[service], :target => "_blank", :alt => service.to_s.capitalize)
+      link_to(image_tag("#{@theme.path}" + "/assets/images/#{service.to_s}.png"), URLS[service], :target => "_blank", :alt => service.to_s.capitalize)
     end
 
     def press_bread_crumb
