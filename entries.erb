@@ -1,10 +1,11 @@
+<% require File.join(File.dirname(__FILE__), 'helper', 'press_helper') %>
 <% @posts.map.with_index(1) do |post, i| %>
     <article class="entry">
         <header class="entry-header">
             <h1 class="entry-title"><a href="<%= post.link %>"><%= post.title %></a></h1>
         </header>
         <section class="entry-body">
-            <%= press_read_more(post.body, post.link) rescue post.body %>
+            <%= press_read_more(post.body, post.link) %>
         </section>
         <footer class="entry-footer">
             <p>
