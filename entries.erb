@@ -1,27 +1,24 @@
-<% require File.join(File.dirname(__FILE__), 'helper', 'press_helper') %>
-<% @posts.map.with_index(1) do |post, i| %>
+<% @posts.each do |post| %>
     <article class="entry">
-        <header class="entry-header">
-            <h1 class="entry-title"><a href="<%= post.link %>"><%= post.title %></a></h1>
+        <header class="title">
+            <h1><a href="<%= post.link %>"><%= post.title %></a></h1>
         </header>
-        <section class="entry-body">
-            <%= press_read_more(post.body, post.link) %>
-        </section>
-        <footer class="entry-footer">
+        <div class="short-body">
+          <%= post.body %>
+        </div>
+        <footer class="footer">
             <p>
-                Tags <%= post.tags.map{|tag| %Q| <a href="#{tag.link}">#{tag.name}</a> |}.join(",") %>
+                Tags <%= post.tags.map{|tag| %Q|<a href="#{tag.link}">#{tag.name}</a>|}.join(", ") %>
                 by <span class="author vcard"><a href="#"><%= post.user.name %></a></span>
                 on <time><%= post.created_at.to_date %></time>
                 <span class="toggle-comments"><%= link_to "Comments(#{post.comments.size})", "#{post.link}#comment" %></span>
             </p>
         </footer>
     </article><!-- END Article -->
-    <% if @posts.size > i %>
-        <hr class="hr-entry">
-    <% end %>
+    <%= "<hr />" unless @posts.last == post %>
 <% end %>
 
-<nav class="pagenation">
+<div class="pagenation">
     <ul>
         <li class="next">
           <% if @posts.pager.previous_page %>
@@ -34,4 +31,4 @@
           <% end %>
         </li>
     </ul>
-</nav>
+</div>

@@ -1,12 +1,11 @@
-<% require File.join(File.dirname(__FILE__), 'helper', 'press_helper') %>
 <article class="entry">
-    <header class="entry-header">
-        <h1 class="entry-title"><%= @entry.title %></h1>
+    <header class="title">
+        <h1><%= @entry.title %></h1>
     </header>
-    <section class="entry-body">
-        <%= press_remove_more @entry.body rescue @entry.body %>
-    </section>
-    <footer class="entry-footer">
+    <div class="body">
+        <%= @entry.body %>
+    </div>
+    <footer>
         <p>
             Tags <%= @entry.tags.map{|tag| %Q| <a href="#{tag.link}">#{tag.name}</a> |}.join(",") %>
             by <span class="author vcard"><a href="#"><%= @entry.user.try(:name) %></a></span>
@@ -17,7 +16,6 @@
 </article><!-- END Article -->
 
 <%= press_pager @entry, :class => "pagenation" %>
-
 
 <section id="comment" style="display:none;">
     <%= partial "comment", :locals => {:entry => @entry} %>

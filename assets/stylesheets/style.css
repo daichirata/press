@@ -177,13 +177,13 @@ a:active, a:focus {
 
 /* END Global */
 /* Header */
-#header-top {
+header#top {
   color: #1E1E1E;
   font-family: 'Quicksand', sans-serif;
   width: 960px;
   margin: 0 auto;
   padding: 80px 0 80px; }
-  #header-top #header-title a {
+  header#top h1 a {
     color: #1E1E1E;
     font-size: 80px;
     font-weight: 300;
@@ -197,12 +197,12 @@ a:active, a:focus {
     -moz-transition: all 200ms linear;
     -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0); }
-  #header-top #header-title a:hover {
+  header#top h1 a:hover {
     background: none;
     -webkit-transform: scale(1.1) translateZ(0);
     -moz-transform: scale(1.1) translateZ(0);
     transform: scale(1.1) translateZ(0); }
-  #header-top #header-description {
+  header#top h2 {
     font-weight: normal;
     font-size: 20px; }
 
@@ -222,37 +222,42 @@ a:active, a:focus {
 #contents {
   width: 600px;
   float: left; }
-  #contents .entry .entry-header h1:first-letter {
+  #contents .entry .title h1:first-letter {
     color: #ac0649;
     font-size: 50px;
     font-style: italic; }
-  #contents .entry .entry-header .entry-title {
+  #contents .entry .title h1 {
     color: #333;
     font-size: 26px;
     font-weight: normal;
     line-height: 1.4;
     margin-bottom: 20px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
-    #contents .entry .entry-header .entry-title a {
+    #contents .entry .title h1 a {
       color: #333;
       text-decoration: none;
       text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
       transition: color 150ms ease-in-out;
       -webkit-transition: color 150ms ease-in-out;
       -moz-transition: color 150ms ease-in-out; }
-    #contents .entry .entry-header .entry-title a:hover {
+    #contents .entry .title h1 a:hover {
       color: #ac0649; }
-  #contents .entry .entry-body .read-more {
-    text-align: right; }
-  #contents .entry .entry-body h1, #contents .entry .entry-body h2, #contents .entry .entry-body h3, #contents .entry .entry-body h4, #contents .entry .entry-body h5, #contents .entry .entry-body h6 {
+  #contents .entry .body h1, #contents .entry .body h2, #contents .entry .body h3, #contents .entry .body h4, #contents .entry .body h5, #contents .entry .body h6 {
     font-family: 'Quicksand', sans-serif;
     font-weight: normal;
     padding: 7px 0 7px 22px;
     border-left: 3px solid #BB3B68;
     margin: 55px 0 25px 0; }
-  #contents .entry .entry-body p {
+  #contents .entry .body p {
     margin: 15px 0; }
-  #contents .entry .entry-footer {
+  #contents .entry .short-body p {
+    margin: 15px 0; }
+  #contents .entry .short-body a[href^="/"] {
+    font-size: 130%;
+    margin-bottom: 20px;
+    display: block;
+    text-align: right; }
+  #contents .entry footer {
     font-family: 'Quicksand', sans-serif;
     font-weight: normal;
     margin: 5px 0 35px 0;
@@ -272,6 +277,11 @@ a:active, a:focus {
     background: -o-linear-gradient(top, #f3f3f3 0%, #ececec 100%);
     background: -ms-linear-gradient(top, #f3f3f3 0%, #ececec 100%);
     background: linear-gradient(top, #f3f3f3 0%, #ececec 100%); }
+    #contents .entry footer .toggle-comments {
+      position: relative;
+      float: right;
+      color: #BB3B68;
+      cursor: pointer; }
   #contents .entry .thumbnail {
     float: left;
     background: #f4f4f4;
@@ -281,16 +291,11 @@ a:active, a:focus {
     text-align: center;
     border: 2px solid #cecdcd;
     border-radius: 3px 5px 5px 5px; }
-  #contents .hr-entry {
+  #contents hr {
     margin: 30px 0 20px;
     border-top: 1px dashed #CCC;
     height: 1px;
     color: #FFFFFF; }
-  #contents .toggle-comments {
-    position: relative;
-    float: right;
-    color: #BB3B68;
-    cursor: pointer; }
   #contents #comment #comment-list {
     margin: 20px 0 20px; }
     #contents #comment #comment-list p {
@@ -335,9 +340,9 @@ a:active, a:focus {
     margin: 6px 0; }
   #aside .side-nav {
     margin-bottom: 50px; }
-  #aside .ad-nav ul {
+  #aside .admin-nav ul {
     padding-top: 30px; }
-  #aside .ad-nav li {
+  #aside .admin-nav li {
     float: left; }
   #aside .archives li {
     list-style-position: inside;
@@ -373,12 +378,26 @@ a:active, a:focus {
 
 /* END Container */
 /* Footer  */
-#footer {
+footer#top {
   width: 960px;
   text-align: center;
   margin: 0 auto;
   padding: 30px 0; }
-  #footer p {
+  footer#top p {
     text-shadow: 1px 1px 0px white; }
 
 /* END Footer */
+.syntaxhighlighter a,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter table,
+.syntaxhighlighter table td,
+.syntaxhighlighter table tr,
+.syntaxhighlighter table tbody,
+.syntaxhighlighter table thead,
+.syntaxhighlighter table caption,
+.syntaxhighlighter textarea {
+  line-height: 1.5em !important; }
+
+.syntaxhighlighter table td.code {
+  padding: 8px !important; }

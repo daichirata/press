@@ -52,9 +52,7 @@ h3 { font-size: 26px; }
 h4 { font-size: 21px; }
 h5 { font-size: 18px; }
 h6 { font-size: 16px; }
-
-hr { border:none; }
-
+hr { border: none; }
 ::selection { background: #FF5E99; color: white;text-shadow: none; }
 ::-moz-selection { background: #FF5E99; color: white;text-shadow: none; }
 :focus {-moz-outline-style: none;}
@@ -171,13 +169,13 @@ a:active, a:focus { outline: 0 none; }
 
 /* Header */
 
-#header-top {
+header#top {
     color: #1E1E1E;
     font-family: 'Quicksand', sans-serif;
     width: 960px;
     margin: 0 auto;
     padding: 80px 0 80px;
-    #header-title {
+    h1 {
         a {
             color: #1E1E1E;
             font-size: 80px;
@@ -200,7 +198,7 @@ a:active, a:focus { outline: 0 none; }
             transform: scale(1.1) translateZ(0);
         }
     }
-    #header-description {
+    h2 {
         font-weight: normal;
         font-size: 20px;
     }
@@ -228,16 +226,16 @@ a:active, a:focus { outline: 0 none; }
     width: 600px;
     float: left;
     .entry {
-        .entry-header{
+        .title {
             h1:first-letter {
                 color: #ac0649;
                 font-size: 50px;
                 font-style: italic;
             }
-            .entry-title {
+            h1 {
                 color: #333;
                 font-size: 26px;
-                font-weight:normal;
+                font-weight: normal;
                 line-height: 1.4;
                 margin-bottom: 20px;
                 text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
@@ -252,8 +250,7 @@ a:active, a:focus { outline: 0 none; }
                 a:hover { color: #ac0649; }
             }
         }
-        .entry-body {
-            .read-more { text-align: right; }
+        .body {
             h1,h2,h3,h4,h5,h6 {
                 font-family: 'Quicksand', sans-serif;
                 font-weight: normal;
@@ -263,7 +260,16 @@ a:active, a:focus { outline: 0 none; }
             }
             p { margin: 15px 0; }
         }
-        .entry-footer {
+        .short-body {
+            p { margin: 15px 0; }
+            a[href^="/"] {
+                font-size: 130%;
+                margin-bottom: 20px;
+                display: block;
+                text-align: right;
+              }
+        }
+        footer {
             font-family: 'Quicksand', sans-serif;
             font-weight: normal;
             margin: 5px 0 35px 0;
@@ -284,6 +290,12 @@ a:active, a:focus { outline: 0 none; }
             background: -o-linear-gradient(top, #F3F3F3 0%,#ECECEC 100%);
             background: -ms-linear-gradient(top, #F3F3F3 0%,#ECECEC 100%);
             background: linear-gradient(top, #F3F3F3 0%,#ECECEC 100%);
+            .toggle-comments {
+                position: relative;
+                float: right;
+                color: #BB3B68;
+                cursor: pointer;
+            }
         }
         .thumbnail {
             float: left;
@@ -297,17 +309,11 @@ a:active, a:focus { outline: 0 none; }
         }
 
     }
-    .hr-entry {
+    hr {
         margin: 30px 0 20px;
         border-top: 1px dashed #CCC;
         height:1px;
         color:#FFFFFF;
-    }
-    .toggle-comments {
-        position: relative;
-        float: right;
-        color: #BB3B68;
-        cursor: pointer;
     }
     #comment {
         #comment-list{
@@ -361,7 +367,7 @@ a:active, a:focus { outline: 0 none; }
     }
     dl { margin: 6px 0; }
     .side-nav { margin-bottom: 50px; }
-    .ad-nav {
+    .admin-nav {
         ul { padding-top: 30px; }
         li { float:left; }
     }
@@ -409,7 +415,7 @@ a:active, a:focus { outline: 0 none; }
 
 /* Footer  */
 
-#footer {
+footer#top {
     width: 960px;
     text-align: center;
     margin: 0 auto;
@@ -418,3 +424,20 @@ a:active, a:focus { outline: 0 none; }
 }
 
 /* END Footer */
+
+.syntaxhighlighter a,
+.syntaxhighlighter div,
+.syntaxhighlighter code,
+.syntaxhighlighter table,
+.syntaxhighlighter table td,
+.syntaxhighlighter table tr,
+.syntaxhighlighter table tbody,
+.syntaxhighlighter table thead,
+.syntaxhighlighter table caption,
+.syntaxhighlighter textarea {
+    line-height: 1.5em !important;
+}
+
+.syntaxhighlighter table td.code {
+    padding: 8px !important;
+}
