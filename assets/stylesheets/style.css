@@ -35,26 +35,8 @@ body {
   font-family: "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   margin: 0;
   background: #f7f7f7 url(../images/bg-body.gif) left top repeat;
-  color: #333;
+  color: #444;
   position: relative; }
-
-h1 {
-  font-size: 32px; }
-
-h2 {
-  font-size: 28px; }
-
-h3 {
-  font-size: 26px; }
-
-h4 {
-  font-size: 21px; }
-
-h5 {
-  font-size: 18px; }
-
-h6 {
-  font-size: 16px; }
 
 hr {
   border: none; }
@@ -244,10 +226,17 @@ header#top {
       color: #ac0649; }
   #contents .entry .body h1, #contents .entry .body h2, #contents .entry .body h3, #contents .entry .body h4, #contents .entry .body h5, #contents .entry .body h6 {
     font-family: 'Quicksand', sans-serif;
-    font-weight: normal;
+    font-weight: normal; }
+  #contents .entry .body h1, #contents .entry .body h2 {
+    font-size: 190%;
     padding: 7px 0 7px 22px;
-    border-left: 3px solid #BB3B68;
-    margin: 55px 0 25px 0; }
+    margin: 55px 0 25px 0;
+    border-left: 3px solid #BB3B68; }
+  #contents .entry .body h3, #contents .entry .body h4, #contents .entry .body h5, #contents .entry .body h6 {
+    font-size: 160%;
+    padding: 5px 0 5px 10px;
+    margin: 35px 0 15px 0;
+    border-bottom: 3px  solid #BB3B68; }
   #contents .entry .body p {
     margin: 15px 0; }
   #contents .entry .short-body p {
